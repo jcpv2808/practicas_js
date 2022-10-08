@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc12</title>
+</head>
+<body>
+    <h1>Manejo de errores</h1>
+    <script>
+        try {
+            console.log("aqui se agrega codigo a ejecutar")
+            error;
+            console.log("segundo mensaje")
+        } catch (error) {
+            console.log("aqui el Catch captura cualquier error");
+            console.log(error);
+        }finally{
+            console.log("el bloque finally siempre se ejecuta al final de la estructura Try-Cartch-Finally")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc11</title>
+</head>
+<body>
+    <h1>Bucles - Estructuras repetitivas</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        };
+        let contador = 0;
+        do {
+            console.log(contador);
+            contador++;
+        } while (contador <=10);
+        //el do-while ejecuta al menos una vez el bloque de codigo
+        while(contador <=10){
+            console.log(contador);
+            contador++;
+        }
+        //el while primero verifica antes de entrar
+        console.log("contador terminado");
+        console.log(separacion.slash);
+        //for
+        for (let i = 0; i < 10; i++) {
+            console.log(i); 
+        }
+        console.log("contador terminado");
+        console.log(separacion.slash);
+
+        //for with length
+        let numeros = [5,10,15,20,25,30,35]
+        for (let i = 0; i < numeros.length; i++) {
+            console.log(numeros[i]);
+        }
+        console.log("contador terminado");
+        console.log(separacion.slash);
+
+        //for - in
+        let tienda = {
+            productos: 25,
+            nombre: "Tienda de la esquina",
+            ubicacion: "En la esquina",
+        }
+        for (const k in tienda) {
+            console.log(`Atributo - ${k}: ${tienda[k]}`);
+        };
+
+        //for - of
+        let palabra = "buscador"
+        for (const letra of palabra){
+            console.log(letra);
+        }
+    </script>
+</body>
+</html>

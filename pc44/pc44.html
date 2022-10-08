@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+<body>
+    <h1>Sets</h1>
+    <script>
+        const set = new Set([1,2,3,4,4,"hola","HOLA",false,false,true])
+        console.log(set)
+        console.log(set.size)
+        const set2 = new Set();
+        set2.add("hola")
+        set2.add("como")
+        set2.add("estas")
+        set2.add("estas")
+        set2.add("yo")
+        set2.add("yo");
+        console.log(set2)
+        console.log(set2.size)
+
+        for(item of set){
+            console.log(item)
+        }
+
+        set2.forEach(e => {
+            console.log(e)
+        });
+
+        let arraySet = Array.from(set)
+        console.log(arraySet[5])
+
+        set.delete("hola")
+        console.log(set)
+
+        console.log(set.has("ayuda"))
+        console.log(set.has(2))
+
+        set2.clear();
+        console.log(set2)
+    </script>
+</body>
+</html>

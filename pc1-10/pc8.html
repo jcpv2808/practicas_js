@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc8</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        }
+
+        const persona= {
+            nombres: "Jean Carlo",
+            apellidos: "Pinto Vilca",
+            edad: 22,
+            hobbies: ["jugar videojuegos","leer wikis"],
+            contacto:{
+                numeros: {
+                    celular: 941699100,
+                    telefono: 10503385
+                },
+                correo: "jcp280899@gmail.com",
+            }
+        };
+        console.log(persona);
+        console.log(separacion.asterisco);
+        console.log(persona["contacto"]);
+        console.log(separacion.guion);
+        console.log(persona.nombres);
+        console.log(separacion.doblePunto);
+        console.log(persona.apellidos);
+        console.log(separacion.slash);
+        console.log(persona.contacto.correo);
+        console.log(separacion.sub_guion);
+
+    </script>
+</body>
+</html>

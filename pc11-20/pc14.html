@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc14</title>
+</head>
+<body>
+    <h1>Destructuracion</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        };
+        const numeros = [1,2,3];
+        //sin destructuracion
+        let uno = numeros[0];
+        let dos = numeros[1];
+        let tres = numeros[2];
+        console.log(uno,dos,tres);
+        console.log(separacion.slash)
+        //con destructuracion
+        const [one, two, three] = numeros;
+        console.log(one,two,three);
+        console.log(separacion.asterisco);
+        //con objetos
+
+        const persona = {
+            nombre: "Jean Carlo",
+            apellido: "Pinto Vilca",
+            edad: 22
+        }
+        const {nombre,apellido,edad} = persona
+        console.log(nombre,apellido,edad);
+    </script>
+</body>
+</html>

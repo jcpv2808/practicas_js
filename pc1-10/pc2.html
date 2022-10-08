@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2</title>
+</head>
+<body>
+    <h1>concatenacion e interpolacion de variables</h1>
+    <ul>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+        <li>primavera</li>
+    </ul>
+    <script>
+        let nombre = "jean";
+        let apellido = "pinto";
+        //concatenacion
+        let saludo = "Hola "+nombre + " "+apellido;
+        //interpolacion
+        //template string
+        let saludo2 = `hola mi nombre es ${nombre} ${apellido}.`
+        console.log(saludo);
+        console.log(saludo2);
+        //"",'',``
+        let ul = "<ul><li>verano</li><li>otoño</li><li>invierno</li><li>primavera</li></ul>";
+        let ul2 = `<ul>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+        <li>primavera</li>
+        </ul>`;
+        console.log(ul);
+        console.log(ul2);
+    </script>
+    
+</body>
+</html>

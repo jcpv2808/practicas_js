@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeakSets & WeakMaps</title>
+</head>
+<body>
+    <h1>WeakSets & WeakMaps</h1>
+    <script>
+        //NO SE PUEDEN DEFINIR LOS VALORES DEL WEAKSET, SE DEBEN AGREGAR CON EL METODO ADD SI O SI
+        //SOLO ACEPTA OBJETOS
+        /*
+        const ws = new WeakSet([])
+        let obj1 = {"valor1": 1, "valor2": 2}
+        let obj2 = {"valor3": 3, "valor4": 4}
+        let obj3 = {"valor5": 5, "valor6": 6}
+
+        ws.add(obj1)
+        ws.add(obj2)
+        ws.add(obj3)
+
+        console.log(ws)
+
+        setInterval(() => {
+            console.log(ws)
+        }, 1000);
+
+        setTimeout(() => {
+            obj1 = null
+            obj2 = null
+            obj3 = null
+        },5000)
+        */
+        const mapa = new Map([
+            ["nombre", "Jean"],
+            ["edad", 23],
+            ["apellido","Pinto"],
+        ])
+
+        const wm = new WeakMap();
+        let llave1 = {}
+        let llave2 = {}
+        let llave3 = {}
+        wm.set(llave1,1)
+        wm.set(llave2,2)
+        wm.set(llave3,3)
+        console.log(wm)
+        console.log(wm.get(llave1))
+
+        setInterval(() => {
+            console.log(wm)
+        }, 1000);
+
+        setTimeout(() => {
+            llave1 = null
+            llave2 = null
+            llave3 = null
+        }, 5000);
+    </script>
+</body>
+</html>

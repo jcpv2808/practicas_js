@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc6</title>
+</head>
+<body>
+    <h1>Funciones</h1>
+    <script>
+        //funcion declarada
+        function estoEsUnaFuncion(){
+            console.log("uno");
+            console.log("dos");
+            console.log("tres");
+        } 
+        function separacion(){
+            console.log("-------------------")
+        }
+
+        //invocacion de funciones
+        estoEsUnaFuncion();
+        separacion();
+        estoEsUnaFuncion();
+        separacion();
+        estoEsUnaFuncion();
+        separacion();
+        estoEsUnaFuncion();
+        separacion();
+
+        function saludar(nombre, edad){
+            console.log(`hola, soy ${nombre} y tengo ${edad} años`)
+        }
+
+        saludar("Jean Carlo", 22);
+
+        //funciones declaradas vs funciones expresdadas
+        //declarada ini
+        /*las funciones declaradas SI se pueden invocar
+        antes de declararla -- JS ordena el codigo y las declara de manera automatica*/
+        funcionDeclarada();
+
+        function funcionDeclarada(){
+            console.log("esto es una funcion declada")
+        }
+
+        funcionDeclarada();
+        //declarada fin
+        //expresada ini
+
+        //funcionExpresada();
+        /*las funciones expresadas NO se pueden invocar
+        antes de declararla*/
+        const funcionExpresada = function(){
+            console.log("esta es una funcion expresada")
+        }
+
+        funcionExpresada();
+        //expresada fin
+
+    </script>
+</body>
+</html>

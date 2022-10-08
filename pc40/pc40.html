@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc40</title>
+</head>
+<body>
+    <h1>Callbacks</h1>
+    <script>
+        function cuadradoCallBack(value, callback){
+            setTimeout(() => {
+                callback(value,value*value)
+            }, 0|Math.random()*100);
+        }
+
+        cuadradoCallBack(0, (value,result) => {
+            console.log("inicia callback")
+            console.log(`CallBack: ${value}: ${result}`)
+        })
+    </script>
+</body>
+</html>

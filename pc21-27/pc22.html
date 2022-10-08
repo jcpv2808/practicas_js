@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc22</title>
+</head>
+<body>
+    <h1>Objeto Date</h1>
+    <script>
+        console.log(Date());
+        let fecha = new Date();
+        console.log(fecha);
+        console.log(`El dia de hoy es: ${fecha.getDate()}`);
+        //fecha con nombre del dia y nombre del mes
+        const dia_mes = () => {
+            let dia = fecha.getDay(), mes = fecha.getMonth();
+            let nombreDia, nombreMes;
+            switch(dia){
+                case 0:
+                    nombreDia = "Domingo";
+                    break;
+                case 1:
+                    nombreDia = "Lunes";
+                    break;
+                case 2:
+                    nombreDia = "Martes";
+                    break;
+                case 3:
+                    nombreDia = "Miercoles";
+                    break;
+                case 4:
+                    nombreDia = "Jueves";
+                    break;
+                case 5:
+                    nombreDia = "Viernes";
+                    break;
+                case 6:
+                    nombreDia = "Sábado";
+                    break; 
+            }
+            switch(mes){
+                case 0:
+                    nombreMes = "Enero";
+                    break;
+                case 1:
+                    nombreMes = "Febrero";
+                    break;
+                case 2:
+                    nombreMes = "Marzo";
+                    break;
+                case 3:
+                    nombreMes = "Abril";
+                    break;
+                case 4:
+                    nombreMes = "Mayo";
+                    break;
+                case 5:
+                    nombreMes = "junio";
+                    break;
+                case 6:
+                    nombreMes = "Julio";
+                    break;
+                case 7:
+                    nombreMes = "Agosto";
+                    break;
+                case 8:
+                    nombreMes = "Septiembre";
+                    break;
+                case 9:
+                    nombreMes = "Octubre";
+                    break;
+                case 10:
+                    nombreMes = "Noviembre";
+                    break;
+                case 11:
+                    nombreMes = "Diciembre";
+                    break;
+            }
+            return (console.log(`Hoy es ${nombreDia} ${fecha.getDate()} de ${nombreMes}`))
+        }
+        dia_mes();
+        console.log(Date.now())
+    </script>
+</body>
+</html>

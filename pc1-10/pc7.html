@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc7</title>
+</head>
+<body>
+    <h1>Arreglos(Arrays)</h1>
+    <script>
+        function separacion(){
+            console.log("--------------------------------")
+        }
+        const nombre = ["Juan","Jean","Carlos"];
+        const arreglo2 = [1,"dos",["tres",4]];
+        const apellido = ["Pinto","Castillo","Perez"]
+        console.log(nombre);
+        separacion();
+        console.log(typeof(nombre));
+        separacion();
+        console.log(arreglo2);
+        separacion();
+        console.log(typeof(arreglo2));
+        separacion();
+        console.log(nombre[2]);
+        separacion();
+        console.log(`hola ${nombre[1]} ${apellido[1]}`)
+        separacion();
+
+        const arreglo4 = Array.of("num0","num1","num2","num3")
+        console.log(arreglo4);
+        separacion();
+
+        let pi = 3.1416
+        const arreglo5 = Array(100).fill(pi);
+        console.log(arreglo5);
+        separacion();
+
+        console.log(`el arreglo 5 tiene: ${arreglo5.length} posiciones`);
+
+        const arregloColores = ["rojo", "azul","negro"]
+        arregloColores.push("verde");//arregla un nuevo elemento al final del arreglo
+        console.log(arregloColores);
+        separacion();
+        arregloColores.pop();//quita el ultimo elemento de un arreglo
+        console.log(arregloColores);
+        separacion();
+        arregloColores.splice(1,1);//permite eliminar una cantidad de elementos segun su posicion dentro del arreglo "(inicio, cantidadEliminada)"
+        console.log(arregloColores);
+        separacion();
+    </script>
+</body>
+</html>

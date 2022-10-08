@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc26</title>
+</head>
+<body>
+    <h1>Regex - Expresion Regulares</h1>
+    <script>
+        let mensaje = "Hola soy un mensaje, llevo un mensaje para todos, un mensaje muy interesante"
+        let expReg = new RegExp("mensaje","ig");
+        let expReg2 = /mensaje/ig;
+
+        console.log(expReg.test(mensaje));
+        console.log(expReg.exec(mensaje));
+        console.log(expReg2.test (mensaje));
+        console.log(expReg2.exec(mensaje));
+    </script>
+</body>
+</html>

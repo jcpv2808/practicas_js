@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc10</title>
+</head>
+<body>
+    <h1>Condicionales</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        }
+        // if - else
+        let edad = 15
+        if(edad<18){
+            console.log("eres menor de edad");
+            console.log(separacion.michi)
+        }else{
+            console.log("eres mayor de edad")
+            console.log(separacion.michi)
+        }
+
+        //if - else if
+
+        /*let hora = 5;
+        if(hora>=18){
+            console.log("es de noche")
+            console.log(separacion.michi)
+        }else if(hora>=12){
+            console.log("es de tarde")
+            console.log(separacion.michi)
+        }else if(hora>=6){
+            console.log("es de mañana")
+            console.log(separacion.michi)
+        }else if(hora>=0){
+            console.log("es de madrugada")
+            console.log(separacion.michi)
+        }*/
+        let hora = 20;
+        if ((hora>=0)&&(hora<6)) {
+            console.log("es de madrugada")
+            console.log(separacion.michi)
+        }else if((hora>=6)&&(hora<12)){
+            console.log("es de mañana")
+            console.log(separacion.michi)
+        }else if((hora>=12)&&(hora<18)){
+            console.log("es de tarde")
+            console.log(separacion.michi)
+        }else if((hora>=18)&&(hora<24)){
+            console.log("es de noche")
+            console.log(separacion.michi)
+        }
+
+        //Operador Ternario(condicion)? verdadero:falsa
+         let eresMayor = (edad>=18) ? "Eres mayor de edad":"Eres menor de edad";
+         console.log(eresMayor);
+         console.log(separacion.michi);
+
+         //switch - case
+         dia = 4;
+         switch (dia) {
+            case 1:
+            console.log("lunes");
+            console.log(separacion.michi);
+                break;
+            case 2:
+            console.log("martes");
+            console.log(separacion.michi);
+                break;
+            case 3:
+            console.log("miercoles");
+            console.log(separacion.michi);
+                break;
+            case 4:
+            console.log("jueves");
+            console.log(separacion.michi);
+                break;
+            case 5:
+            console.log("viernes");
+            console.log(separacion.michi);
+                break;
+            case 6:
+            console.log("sabado");
+            console.log(separacion.michi);
+                break;
+            case 7:
+            console.log("domingo");
+            console.log(separacion.michi);
+                break;
+            default:
+            console.log("No existe ese dia");
+            console.log(separacion.michi);
+            break;
+         }
+
+        
+    </script>
+</body>
+</html>

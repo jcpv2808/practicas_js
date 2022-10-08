@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <h1>Map</h1>
+    <script>
+        let mapa = new Map();
+        mapa.set("nombre","Jean")
+        mapa.set("apellido","Pinto")
+        mapa.set("edad",23)
+        console.log(mapa)
+        console.log(mapa.size)
+        console.log(mapa.has("hola"))
+        console.log(mapa.has("nombre"))
+        console.log(mapa.get("apellido"))
+        mapa.set("nombre","Carlo")
+        console.log(mapa.get("nombre"))
+        console.log(mapa)
+        mapa.delete("nombre")
+        console.log(mapa)
+        console.log("-------------------------")
+        mapa.forEach(e => {
+            console.log(e)
+        });
+
+        for ([llave,dato] of mapa) {
+            console.log(`${llave} es ${dato}`)
+        }
+
+        const mapa2 = new Map([
+            ["nombre", "Jean"],
+            ["edad", 23],
+            ["apellido","Pinto"],
+        ])
+        console.log(mapa2)
+
+        const llavesMapa2 = [...mapa2.keys()]
+        const valoresMapa2 = [...mapa2.values()]
+        console.log(llavesMapa2)
+        console.log(valoresMapa2)
+    </script>
+</body>
+</html>

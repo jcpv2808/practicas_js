@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc21</title>
+</head>
+<body>
+    <h1>Objeto Console</h1>
+    <script>
+        console.log(console);
+        console.error("Un mensaje con la forma de un error");
+        console.warn("Este mensaje es un aviso");
+
+        let nombre = "Jean", apellido = "Pinto", edad = 22;
+        console.log("Sin comodines:")
+        console.log(`Hola soy ${nombre} ${apellido}, tengo ${edad} años`)
+        //comodines
+        console.log("Con comodines:")
+        console.log(`Hola soy %s %s, tengo %d años`, nombre,apellido,edad);
+
+        console.clear();//limpia todo lo que estaba en la consola
+
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+
+        console.group("Lista de mercado");
+        console.log("Huevos");
+        console.log("Pollo");
+        console.log("Arroz");
+        console.log("Leche");
+        console.groupEnd();
+
+        console.groupCollapsed("Lista de mercado");
+        console.log("Huevos");
+        console.log("Pollo");
+        console.log("Arroz");
+        console.log("Leche");
+        console.groupEnd();
+
+        console.log(console);
+        console.table(Object.entries(console).sort());
+
+        const numeros = [1,2,3,4,5], vocales = ["a","e","i","o","u"]
+        console.table(numeros);
+        console.table(vocales);
+
+        const producto = {
+            nombre: "Lavadora",
+            precio: "5000",
+            cant: "200"
+        };
+        console.clear();
+        console.table(producto);
+        console.clear();
+        console.time("Tiempo de ejecucion")
+        const array1 = Array(100) 
+        for(let i = 0; i < array1.length; i++){
+            array1[i] = i;
+        }
+        console.timeEnd("Tiempo de ejecucion")
+        console.table(array1);
+        for(let i =0; i<100;i++){
+            console.count("Ejecutado");
+            console.log(i);
+        }
+        console.clear();
+        let x = 3, y = 2, pruebaXY = "X siempre debe ser menor que Y";
+        console.assert(x<y,{x,y,pruebaXY})
+        
+    </script>
+</body>
+</html>

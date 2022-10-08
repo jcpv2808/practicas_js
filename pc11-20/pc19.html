@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc19</title>
+</head>
+<body>
+    <h1>Clases y Herencia</h1>
+    <script>
+        //clase Pj
+        class Pj{
+            constructor(nombre,clase,genero){
+                this.nombre = nombre;
+                this.clase = clase;
+                this.genero = genero;
+            }
+        }
+        class Faccion extends Pj{
+            constructor(nombre,clase,genero,faccion,raza){
+                super(nombre,clase,genero);
+                this.faccion = faccion, this.raza = raza;
+            }
+            //metodo faccion
+            prueba(){
+                console.log("Soy una prueba")
+            }
+            faccionElejida(nombre,clase,genero,faccion,raza){
+            //horda 
+                if (faccion === 0){
+                    let nombreFaccion = "Horda"
+                    let mensaje;
+                    this.faccion = nombreFaccion;
+                    if(raza === 1){
+                        let nombreRaza = "Tauren"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 2){
+                        let nombreRaza = "Troll"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 3){
+                        let nombreRaza = "Elfo de Sangre"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 4){
+                        let nombreRaza = "No-Muerto"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 5){
+                        let nombreRaza = "Orco"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    };//horda fin
+                //alianza ini
+                }else if(faccion === 1){
+                    let nombreFaccion = "Alianza";
+                    this.faccion = nombreFaccion;
+                    let mensaje;
+                    if(raza === 1){
+                        let nombreRaza = "Humano"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 2){
+                        let nombreRaza = "Enano"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 3){
+                        let nombreRaza = "Gnomo"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 4){
+                        let nombreRaza = "Elfo de la Noche"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }else if(raza === 5){
+                        let nombreRaza = "Draenei"
+                        this.raza = nombreRaza;
+                        mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                        console.log(mensaje);
+                    }; 
+                }//alianza fin
+            }//metodo faccion fin
+        }
+        const pj1 = new Faccion("Pursuer","Cazador","Masculino")
+
+        console.log(pj1);
+        pj1.prueba();
+        pj1.faccionElejida("Pursuer","Paladin","Masculino",0,3)
+    </script>
+</body>
+</html>

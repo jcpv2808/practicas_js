@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc24</title>
+</head>
+<body>
+    <h1>Operador de corto circuito</h1>
+    <script>
+        //OR - ||
+        const saludar = (nombre) => {
+            nombre = nombre || "Sin Nombre";
+            console.log(`Hola ${nombre}`)
+        }
+        saludar("");
+        saludar("Jean Carlo")
+
+        //las reglas de truty y falsy aplican en el operador OR, busca valores que tienden a verdadero
+        console.log("No estoy vacio"||"Yo estoy en la derecha");
+        console.log(""||"Yo estoy en la derecha");
+        console.log(0||"Yo estoy en la derecha");
+        console.log(1||"Yo estoy en la derecha");
+        console.log(true||"Yo estoy en la derecha");
+        console.log(-8||"Yo estoy en la derecha");
+        console.log(null||"Yo estoy en la derecha");
+        console.log(undefined||"Yo estoy en la derecha");
+        console.log([]||"Yo estoy en la derecha");
+        console.log({}||"Yo estoy en la derecha");
+
+        //AND - &&
+        //Aplica las reglas de OR pero al contrario, osea que busca valores que tiendan a falso
+
+        console.log("No estoy vacio"&&"Yo estoy en la derecha");
+        console.log(""&&"Yo estoy en la derecha");
+        console.log(0&&"Yo estoy en la derecha");
+        console.log(1&&"Yo estoy en la derecha");
+        console.log(true&&"Yo estoy en la derecha");
+        console.log(-8&&"Yo estoy en la derecha");
+        console.log(null&&"Yo estoy en la derecha");
+        console.log(undefined&&"Yo estoy en la derecha");
+        console.log([]&&"Yo estoy en la derecha");
+        console.log({}&&"Yo estoy en la derecha");
+
+    </script>
+</body>
+</html>

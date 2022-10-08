@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxys</title>
+</head>
+<body>
+    <h1>Proxys</h1>
+    <script>
+        const persona = {
+            nombre: "",
+            apellido: "",
+            edad: 0
+        }
+
+        const manejador = {
+            set(obj,prop,valor){
+                //aqui van todas las validaciones
+                if(Object.keys(obj).indexOf(prop) === -1){
+                    return console.warn(`La propiedad ${prop} no existe en el objeto ${obj}`)
+                }
+                //asignacion de el valor ingresado en la propiedad del objeto
+                obj[prop] = valor;
+            }
+        }
+
+        const jean = new Proxy(persona,manejador)
+        const alonso = new Proxy(persona,manejador)
+
+        console.log(jean)
+        jean.nombre = "Jean"
+        jean.apellido = "Pinto"
+        jean.edad = 23
+        console.log(jean)
+        alonso.nombre = "Alonso"
+        alonso.apellido = "Vargas"
+        alonso.edad = 21
+        alonso.email = "alonso@gmail.com"
+        console.log(alonso)
+    </script>
+</body>
+</html>

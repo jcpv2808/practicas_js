@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc18</title>
+</head>
+<body>
+    <h1>Prototipos</h1>
+    <script>
+        //POO
+        /* Instancia ---- Copia de una clase.
+        .CLASE: Modelo a Seguir, para generar INSTANCIAS.
+        .OBJETOS: es una INSTANCIA de una clase.
+            -ATRIBUTOS: caracteristica o una propiedad del objeto (variables dentro de un objeto). 
+            -METODOS: son las acciones que un objeto puede realizar(funciones dentro de un objeto).
+        */
+
+       //Clase Pj ini
+       function Pj(nombre,clase,genero){
+        this.nombre = nombre;
+        this.clase = clase;
+        this.genero = genero;
+       }//Clase Pj fin
+       
+         function Faccion (nombre,clase,genero,faccion,raza){
+            this.super = Pj;
+            this.super(nombre,clase,genero);
+            this.faccion = faccion,this.raza = raza;
+            //horda ini
+            if (faccion === 0){
+                nombreFaccion = "Horda"
+                let mensaje;
+                this.faccion = nombreFaccion;
+                if(raza === 1){
+                    nombreRaza = "Tauren"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 2){
+                    nombreRaza = "Troll"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 3){
+                    nombreRaza = "Elfo de Sangre"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 4){
+                    nombreRaza = "No-Muerto"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 5){
+                    nombreRaza = "Orco"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                };//horda fin
+            //alianza ini
+            }else if(faccion === 1){
+                let nombreFaccion = "Alianza";
+                this.faccion = nombreFaccion;
+                let mensaje;
+                if(raza === 1){
+                    nombreRaza = "Humano"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 2){
+                    nombreRaza = "Enano"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 3){
+                    nombreRaza = "Gnomo"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 4){
+                    nombreRaza = "Elfo de la Noche"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }else if(raza === 5){
+                    nombreRaza = "Draenei"
+                    this.raza = nombreRaza;
+                    mensaje = `Bienvenido a la ${nombreFaccion} ${nombre}, ${nombreRaza}`;
+                    console.log(mensaje);
+                }; 
+            }//alianza fin
+        }//faccion fin
+
+        //Prototipos ini
+        Faccion.prototype = new Pj();
+        //Prototipos fin
+        //objetos ini
+        const pj1 = new Faccion("Pursuer","Paladin","masculino",0,3);
+        const pj2 = new Faccion("Legolas","Cazador","masculino",1,4);
+        const pj3 = new Faccion("Diabolo","Brujo","femenino",1,1)
+        //objetos fin
+        //outputs
+        console.log(pj1);
+        console.log(pj2);
+        console.log(pj3);
+        //.faccion(1,3);
+    </script>
+</body>
+</html>

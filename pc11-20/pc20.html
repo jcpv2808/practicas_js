@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pc20</title>
+</head>
+<body>
+    <h1>Estaticos, Setters y Getters</h1>
+    <script>
+        //Metodo Estatico - se puede ejecutar sin instaciar la clase - osea que se puede ejecutar sin haber crear un objeto de esa clase
+        class Producto{// clase base - Producto
+            constructor(nombre,precio){
+                this.nombre = nombre, this.precio = precio;
+            } 
+        }
+        class Lavadora extends Producto{
+            constructor(nombre, precio, color, marca){
+                super(nombre,precio);
+                this.color = color, this.marca = marca;
+                this.tamanio = null;
+            }
+            //AQUI ESTA EL STATIC
+            static descripcion(){
+                console.log(`Nuestras lavadores estan certificadas por expertos en lavado de ropa`);
+            }
+            //setter y getter - tamanio
+            get getTamanio(){
+                return this.tamanio;
+            }
+            set setTamanio(tamanio){
+                this.tamanio = tamanio;
+            }
+        };
+        const lavadora_imaco1 = new Lavadora("PowerWash",600,"negro","Imaco");
+        const lavadora_imaco2 = new Lavadora("UltraWash",1200,"plateado","Imaco");
+        console.log(lavadora_imaco1);
+        console.log(lavadora_imaco2);
+        //invocando el Static de la clase Lavadora
+        Lavadora.descripcion();
+        //los getters y setters se mandan a llamar como si fueran un atributo
+        lavadora_imaco1.setTamanio = "Grande";
+        console.log(`El tamaño de la ${lavadora_imaco1.nombre} es ${lavadora_imaco1.getTamanio}`);
+        lavadora_imaco2.setTamanio = "Pequeño";
+        console.log(`El tamaño de la ${lavadora_imaco2.nombre} es ${lavadora_imaco2.getTamanio}`);
+
+
+    </script>
+</body>
+</html>

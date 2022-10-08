@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPASO - 1</title>
+</head>
+<body>
+    <h1>Repaso 1 (pc1-pc10)</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        }
+        //pc1
+        //tipos de variables
+        var variableVar;//no uses var
+        let variableLet;//usa let, porque var es una variable global y let es una variable de bloque
+        const variableConst = "";//const se debe inicializar antes de poder usarla, solo se debe usar cuando su valor no va a cambiar nunca
+        //const se puede usar en arrays y objetos porque aunque se añada un nuevo atributo, el objeto sigue siendo el mismo
+        /*ejemplo: const persona = ["altura","peso"]
+        persona.push("edad")
+        persona sigue siendo persona, pero ahora tiene un nuevo atributo "edad"
+        */
+        console.log(separacion.asterisco)
+        //pc2
+        //"",'',``
+        //"", permiten declarar un string, se tienen que concatenar para añadir variables
+        let ejemplo1 = "Soy un string con comillas";
+        console.log(ejemplo1);
+        //'', usado dentro de "" para no interferir con el string que se esta escribiendo
+        let ejemplo2 = "Soy un string con comillas, pero tambien tengo 'Apostrofes'";
+        console.log(ejemplo2);
+        //``, permiten invocar variables dentro de una sola linea 
+        let despedida = "'hola, yo soy la variable'";
+        let ejemplo3 = `Soy un string con comillas que invoca una variable.${despedida}`;
+        console.log(ejemplo3);
+        console.log(separacion.asterisco)
+        //pc3
+        //numeros 
+        let num1 = 3;
+        let num2 = 7.54;
+        let num3 = "3.14";
+        console.log(num1);
+        console.log(num2);
+        console.log(num3);
+        console.log(separacion.slash);
+        console.log(num1 + num2);//int+float = float
+        console.log(num2 + num3);//string
+        console.log(num2 + parseFloat(num3));//floa
+        console.log(separacion.asterisco)
+        //pc4
+        //booleanos
+        console.log(true);//true
+        console.log(false);//false
+        console.log(Boolean(0));//false
+        console.log(Boolean(""));//false
+        console.log(Boolean(" "));//true
+        console.log(separacion.asterisco);
+        //para mas info busca - truty, falsy
+        //pc5
+        //null, undefined, NaN
+        console.log("null, undefined, NaN");
+        //null - lo pone el programador a proposito
+        //undefined - lo pone la maquina
+        //NaN - suma de un numero y otro tipo de variable da como resultado NaN(not a number)
+        console.log(separacion.asterisco);
+        //pc6
+        //Funciones
+        let tarea1 = 15;
+        let tarea2 = 15; 
+        let tarea3 = 15;
+        let cuaderno1 = 16;
+        let cuaderno2 = 16;
+        let cuaderno3 = 16;
+        let disciplina1 = 18;
+        let disciplina2 = 18;
+        let disciplina3 = 18;
+        
+        function promedioTareas(){
+            let prom_tareas = (tarea1+tarea2+tarea3)/3;
+            return prom_tareas;
+        }
+        function promedioCuaderno(){
+            let prom_cuaderno = (cuaderno1+cuaderno2+cuaderno3)/3;
+            return prom_cuaderno;
+        }
+        function promedioDisciplina(){
+            let prom_disc = (disciplina1+disciplina2+disciplina3)/3;
+            return prom_disc;
+        }
+        function promedioGeneral(){
+            return((promedioCuaderno()+promedioTareas()+promedioDisciplina())/3);
+        }
+        console.log(`Promedio: ${parseFloat(promedioGeneral()).toFixed(2)}`);
+        console.log(separacion.asterisco);
+        //pc7
+        //Arrays
+        let newArray = ["Hola","soy","un","Array"];
+        console.log(newArray)
+        console.log(`${newArray[0]} ${newArray[3]}`);
+        console.log(separacion.asterisco);
+
+        //pc8
+        //objetos
+        const banco = {
+            dinero: 5000,
+            clientes: 250,
+            direccion: "av. Las pruebas",
+            contacto:{
+                cel: 978562453,
+                tel: 55482695,
+            },
+            empleados:["Jhon","Juan","Renato","Luis"], 
+        };
+        console.log(banco);
+        console.log(banco.contacto.tel);
+        console.log(banco.dinero);
+        console.log(banco.empleados);
+        console.log(banco.empleados[0]);
+        console.log(separacion.asterisco)
+        //pc9
+        //Tipos de operadores
+
+        let a=1, e=2, i=3, o=4 ,u=5 ;
+        let vocales = [a,e,i,o,u];
+        console.log(vocales);
+        function newVocales(){
+            let vocales = [++a,+--e,i*=3,o/=4,u%=2];
+            return(vocales);
+        }
+        console.log(newVocales());
+        console.log(separacion.asterisco);
+        //pc10
+        //Condicionales
+
+        let eleccion = 5;
+        switch(eleccion){
+            case 1:
+                console.log("comida 1");
+                break;
+            case 2:
+                console.log("comida 2");
+                break;
+            case 3:
+                console.log("comida 3");
+                break;
+            case 4: 
+                console.log("comida 4");
+                break;
+            default:
+                console.log(`La comida ${eleccion} no existe`)
+                break;
+            };
+        console.log(separacion.asterisco);
+    </script>
+</body>
+</html>

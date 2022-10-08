@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc27</title>
+</head>
+<body>
+    <h1>Funciones anonimas autoejecutables</h1>
+    <script>
+        (function (){
+            console.log("Esto es una funcion anonima auto-ejecutable - IIFE ")
+        })();
+        //d-document, w-window, c-console
+        (function (d,w,c){
+            console.log("Esto tambien es una funcion anonima auto-ejecutable - IIFE -d,w,c ")
+            console.log(d);
+            console.log(w);
+            c.log("escribiendo en la consola usando 'c'")
+        })(document,window,console);
+        //clasica
+        (function (){
+            console.log("Esto es una funcion anonima auto-ejecutable - IIFE - Clasica")
+        })();
+        //Crockford (Javascript The Good Parts)
+        ((function (){
+            console.log("Esto es una funcion anonima auto-ejecutable - IIFE - Crockford")
+        })());
+        //Unaria
+        +function (){
+            console.log("Esto es una funcion anonima auto-ejecutable - IIFE - Unaria")
+        }();
+        //Facebook
+        !function (){
+            console.log("Esto es una funcion anonima auto-ejecutable - IIFE - Facebook")
+        }();
+    </script>
+</body>
+</html>

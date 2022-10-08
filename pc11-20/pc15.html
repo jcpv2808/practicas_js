@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc15</title>
+</head>
+<body>
+    <h1>Objetos Literales</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        };
+        let nombre = "Jean";
+        let apellido = "Pinto";
+        //objetos normales
+        const persona = {
+            nombre: nombre,
+            apellido: apellido,
+            saludo: function(){
+                console.log(`Hola soy ${nombre} ${apellido}`)
+            }
+        }
+        console.log(persona);
+        persona.saludo();
+        console.log(separacion.slash);
+        //objetos literales
+        const persona2 = {
+            nombre,
+            apellido,
+            saludo(){
+                console.log(`Hola soy ${nombre} ${apellido} 2`)
+            }
+        } 
+        console.log(persona2);
+        persona2.saludo();
+    </script>
+</body>
+</html>

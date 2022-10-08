@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pc9</title>
+</head>
+<body>
+    <h1>Tipos de Operadores</h1>
+    <script>
+        const separacion = {
+                guion:     "----------------------",
+                asterisco: "**********************",
+                sub_guion: "______________________",
+                slash:     "//////////////////////",
+                doblePunto:"::::::::::::::::::::::",
+                porcentaje:"%%%%%%%%%%%%%%%%%%%%%%",
+                michi:     "######################",
+        }
+
+        //Operadores aritmeticos: + - * / % ()
+        
+        /*
+        let a = ((5 + 5 - 8) * 2 / 4)*10;
+        let modulo = 17%3;
+        console.log(a);
+        console.log(modulo);
+        console.log(separacion.asterisco);
+
+        //Operadores relacionales: <, >, <=, >=, ==, ===, !=, !==
+        
+        let b = 8 !== "8";
+        console.log(b);
+        console.log(separacion.asterisco);
+
+        //incremento - decremento
+        let e = 20;
+        e += 3;//20+3 = 23
+        console.log(e);
+        console.log(separacion.asterisco);
+        e -= 3;//23-3 = 20
+        console.log(e);
+        console.log(separacion.asterisco);
+        e *= 3;//20*3 = 60
+        console.log(e);
+        console.log(separacion.asterisco);
+        e /= 3;//60/3 = 20
+        console.log(e);
+        console.log(separacion.asterisco);
+        e %= 3;//20%3 = 2
+        console.log(e);
+        console.log(separacion.sub_guion);
+        */
+
+        //Operadores unarios
+        //let i = 1;
+        //let o = 1;
+        /*el orden es importante, cuando esta primero el operador, primero se ejecuta el calculo
+        pero si esta despues primero se lee la variable, por ejemplo*/
+
+        /*console.log("la variable 'i' es: "+i);
+        console.log(separacion.sub_guion);
+        console.log("la variable 'o' es: "+o);
+        console.log(separacion.sub_guion);
+        console.log("la variable 'i++' es: "+i++);
+        console.log(separacion.sub_guion);
+        console.log("la variable '++o' es: "+(++o));
+        console.log(separacion.sub_guion);
+        i++;
+        i--;
+        ++i;
+        --i;*/
+
+        //Operadores Logicos
+
+        // !  -  NOT: niega, osea que vuelve falso lo verdadero y verdadero lo falso
+        // || - OR: cuando 2 o mas condiciones, si una es verdadera, el resultado es verdadero
+        // && - AND: cuando 2 o mas condiciones, todas las condiciones deben ser verdaderas para que el resultado sea verdadero
+        console.log(separacion.doblePunto);
+        console.log(true);
+        console.log(separacion.doblePunto);
+        console.log(false);
+        console.log(separacion.doblePunto);
+        console.log((9===9)||(9==="9"));//true
+        console.log(separacion.doblePunto);
+        console.log((9===9)&&(9==="9"));//false
+        console.log(separacion.doblePunto);
+        
+    </script>
+</body>
+</html>
