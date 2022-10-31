@@ -155,6 +155,15 @@ const cartelera = [
         pais: ["Peru","Argentina"],
         genero: ["Horror","Action"],
         calificacion: 9.5888,
+    },
+    {
+        id: "ff280899",
+        titulo: "Fuck you Excuse me - The sequel to the prequel to 'The Movie'",
+        director: "Jean Pinto",
+        estreno: 2022,
+        pais: ["Peru","Argentina"],
+        genero: ["Horror","Action"],
+        calificacion: 9.5888,
     }
 ]
 
