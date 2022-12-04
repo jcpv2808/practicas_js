@@ -52,7 +52,7 @@ class Pelicula {
         let regex = /^([a-z]{2}[0-9]{7})$/gi.test(id)
         if(this.validarTexto("IMDB id",id)){
             if(!regex){
-                return console.warn(`La 2 digitos del id deben ser letras y los 7 restantes deben ser numeros `)
+                return console.warn(`La primeros 2 digitos del id deben ser letras minusculas y los 7 restantes deben ser numeros`)
             }
         }
     }
