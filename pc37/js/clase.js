@@ -5,7 +5,7 @@ class Pelicula {
         this.director = director
         this.estreno = estreno
         this.pais = pais
-        this.genero = genero    
+        this.genero = genero
         this.calificacion = calificacion
 
         this.validarIMDB(id)
@@ -67,7 +67,7 @@ class Pelicula {
     }
 
     validarDirector(director){
-        let regex = /^[a-zA-Z0-9]{0,50}$/gi.test(director)
+        let regex = /^[a-zA-Z0-9 ]{0,50}$/gi.test(director)
         if(this.validarTexto("Director",director)){
             if(!regex){
                 return console.warn(`El Director debe contener como maximo 50 characteres`)
@@ -137,7 +137,8 @@ const cartelera = [
         estreno: 2022,
         pais: ["Peru","Argentina"],
         genero: ["Horror","Action"],
-        calificacion: 9.5888,},
+        calificacion: 9.5888,
+    },
     {
         id: "dd1234567",
         titulo: "Fuck you - The prequel to 'The Movie'",
@@ -150,14 +151,14 @@ const cartelera = [
     {
         id: "dd1234567",
         titulo: "Fuck you Excuse me - The sequel to the prequel to 'The Movie'",
-        director: 5,
+        director: "Director4",
         estreno: 2022,
         pais: ["Peru","Argentina"],
         genero: ["Horror","Action"],
         calificacion: 9.5888,
     },
     {
-        id: "ff280899",
+        id: "ff2808998",
         titulo: "Fuck you Excuse me - The sequel to the prequel to 'The Movie'",
         director: "Jean Pinto",
         estreno: 2022,
