@@ -1,6 +1,6 @@
-a{
-    background-color: yellow;
-    color: #222;
+:root{
+    --yellow-color: rgb(221, 255, 0);
+    --dark-color: #222;
 }
 .card{
     display: inline-block;
