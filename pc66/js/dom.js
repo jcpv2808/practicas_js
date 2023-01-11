@@ -2,10 +2,8 @@ function holaMundo() {
     alert("Hola Mundo")
     console.log(event)
 }
-function saludar(nombre){
-    if(!nombre) return `Hola Desconocido`;
+function saludar(nombre = "Desconocido"){
     alert(`Hola ${nombre}`);
-    console.log()
 }
 const $event_semantico = document.getElementById("btn_semantico"),
     $event_multiple = document.getElementById("btn_multiple");
