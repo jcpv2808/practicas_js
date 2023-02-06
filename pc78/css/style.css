@@ -1,0 +1,45 @@
+:root{
+    --yellow-color: rgb(221, 255, 0);
+    --dark-color: #222;
+}
+.cards{
+    border: solid 1px #000;
+}
+.card{
+    display: inline-block;
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+
+.card figcaption{
+    padding: 1em;
+}
+.rotate-45{
+    transform: rotate(45deg);
+}
+.rotate-135{
+    transform: rotate(135deg);
+}
+.opacity-80{
+    opacity: .8;
+}
+.sepia{
+    filter: sepia(1);
+}
+.eventos-flujo div{
+    padding: 4rem;
+    font-size: 2em;
+    text-align: center;
+}
+.uno{
+    background-color: yellow;
+}
+.dos{
+    background-color: gold;
+}
+.tres{
+    background-color: lightyellow;
+}
+#bom_titulo{
+    width: 100%;
+}
